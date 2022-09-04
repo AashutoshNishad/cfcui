@@ -1,17 +1,36 @@
-import React from 'react'
-import "./card.css";
-import img1 from "./img1.jpeg"
-export default function Eventcard() {
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { Button, CardActionArea, CardActions, Icon } from '@mui/material';
+import img from "./img1.jpeg"
+export default function MultiActionAreaCard() {
   return (
-   <>
- <div class="card" style={{width: "30rms"}}>
-  <img src={img1} class="card-img-top" alt=".."/>
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">this event is a best event of CFC. so join event and ...</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-   </>
-  )
+    <Card sx={{ maxWidth: 345 , minWidth: 250 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="140"
+          image={img}
+          alt="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            DSA Carnival
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Time: 12:00 pm 
+           <br />
+           Date: 12/04/03
+            </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button size="small" color="primary">
+          Share
+        </Button>
+      </CardActions>
+    </Card>
+  );
 }

@@ -35,9 +35,10 @@
   flex-direction: column;
   justify-content: space-evenly;
   padding: 30px;
+
 }
 
-#linkeevent {
+.linkeevent {
   display: inline-block;
   padding-bottom: 8px;
   border-bottom: black solid 5px;
@@ -54,10 +55,21 @@
 #event_container {
   padding: 30px;
   display: flex;
-  column-gap: 30px;
-  overflow-x: scroll;
+  column-gap: 5%;
+  /* overflow-x: scroll; */
+  /* column-gap: 30px; */
+  justify-content: flex-start;
+  row-gap: 20px;
+  /* overflow-x: scroll; */
+  /* flex-direction: column; */
+  flex-wrap: wrap;
 }
 
 ::-webkit-scrollbar{
   display: none;
+}
+
+#announcement_window{
+  background-color: #ebdbdb;
+  padding: 15px;
 }

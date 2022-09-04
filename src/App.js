@@ -9,23 +9,33 @@ import {
 import Home from "./Pages/Home";
 import Loginpage from "./Pages/Loginpage";
 import ProfilePage from "./Pages/ProfilePage";
+import EventPage from "./COMPONENTS/eventpage/EventPage";
+import Fotter from "./COMPONENTS/fotter/Fotter";
+import Homewindow from "./COMPONENTS/Windows/Homewindow";
+import Upcevent from "./COMPONENTS/Windows/Upcevent";
+import Announcement from "./COMPONENTS/Windows/Announcement";
 function App() {
   return (
     <Router>
-      <Navbar />
+      {/* <Navbar /> */}
       <Switch>
         <Route
           path="/"
           element={
             <>
-              <Home />
+            <Navbar/>
+            <Homewindow/>
+            <Upcevent/>
+            <Announcement/>
             </>
           }
         />
-        <Route path="/login" element={<Loginpage />} />
+         {/* <Route path="/event" element={<EventPage/>} /> */}
+        {/* <Route path="/login" element={<Loginpage />} /> */}
 
-        <Route path="/Profile" element={<ProfilePage />} />
+        {/* <Route path="/Profile" element={<ProfilePage />} /> */}
       </Switch>
+      <Fotter/>
     </Router>
   );
 }

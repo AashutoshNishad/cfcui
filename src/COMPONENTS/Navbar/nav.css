@@ -1,0 +1,25 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+#navbar{
+    position: absolute;
+    top: 10px;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navlinks{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    column-gap: 25px;
+}
+
+#jn_btn_nav{
+    width: 30px;
+}
